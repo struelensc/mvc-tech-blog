@@ -1,0 +1,19 @@
+{{#each comments as |comment|}}
+  <div class="card mb-4 border-0 shadow-sm">
+    <div class="card-body">
+      <p>{{comment.content}}</p>
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-row align-items-center">
+          <p class="small mb-0">{{comment.user.username}}</p>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+          <p class="small text-muted mb-0">
+            {{format_date comment.date_created}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{/each}}

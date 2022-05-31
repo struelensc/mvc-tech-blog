@@ -1,0 +1,16 @@
+<div class="col-md-12 p-3">
+  <h2>User Dashboard</h2>
+</div>
+
+{{#each blogs as |blog|}}
+  <article class="blog blue">
+    <div class="blog_text">
+      <h1 class="blog_title blue">
+        <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+      </h1>
+      <div class="blog_subtitle d-flex flex-row align-items-center">
+        <p>Created on {{format_date blog.date_created}}</p>
+      </div>
+    </div>
+  </article>
+{{/each}}

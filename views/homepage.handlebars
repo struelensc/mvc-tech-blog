@@ -1,18 +1,18 @@
 <!-- Loop over each object in the blogs array -->
 {{#each blogs as |blog|}}
   <article class="blog blue">
-    <div class="blog__text">
-      <h1 class="blog__title blue">
+    <div class="blog_text">
+      <h1 class="blog_title blue">
         <a href="/blog/{{blog.id}}">{{blog.title}}</a>
       </h1>
-      <div class="blog__subtitle small">
+      <div class="blog_subtitle small">
         <p>Created by
           {{blog.user.username}}
           on
           {{format_date blog.date_created}}</p>
       </div>
-      <div class="blog__bar"></div>
-      <div class="blog__preview-txt">
+      <div class="blog_bar"></div>
+      <div class="blog_preview-txt">
         <p>{{blog.content}}</p>
       </div>
     </div>

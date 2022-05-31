@@ -1,6 +1,7 @@
 :root {
   --main-blue: #0076bd;
   --main-blue-rgb-015: rgba(0, 118, 189, 0.1);
+  --background: #424242;
 }
 
 .no-button {
@@ -61,7 +62,7 @@ a:hover {
   height: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  background-color: #424242;
+  background-color: var(--background);
   transition: width 0.2s ease;
 }
 
@@ -86,7 +87,7 @@ a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  background-image: linear-gradient(-70deg, var(--background), transparent 50%);
   opacity: 1;
   border-radius: 10px;
 }

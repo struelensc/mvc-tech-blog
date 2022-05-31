@@ -11,8 +11,6 @@ const commentFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(response);
-
     if (response.redirected) {
       document.location = response.url;
       return;

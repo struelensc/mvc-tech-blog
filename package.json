@@ -8,9 +8,22 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/struelensc/mvc-tech-blog"
+  },
+  "keywords": [
+    "express",
+    "express-handlebar",
+    "sequelize",
+    "MySQL2",
+    "bcrypt",
+    "dotenv",
+    "express-session",
+    "connect-session-sequelize"
+  ],
+  "author": "Courtney Struelens",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",

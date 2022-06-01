@@ -1,0 +1,17 @@
+[
+  {
+    "content": "This is impressive.",
+    "blog_id": 1,
+    "user_id": 2
+  },
+  {
+    "content": "I'm glad to have read this.",
+    "blog_id": 2,
+    "user_id": 3
+  },
+  {
+    "content": "I appreciate this insight.",
+    "blog_id": 3,
+    "user_id": 1
+  }
+]

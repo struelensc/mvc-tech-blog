@@ -1,0 +1,51 @@
+<form class="modal fade" id="editBlog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit post</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="editedBlogTitle" class="col-form-label">
+              Title:
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="editedBlogTitle"
+            ></input>
+          </div>
+          <div class="mb-3">
+            <label for="editedBlogContent" class="col-form-label">Blog Content:</label>
+            <textarea class="form-control" id="editedBlogContent"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Close</button>
+        <button
+          type="submit"
+          form="editBlog"
+          value="submit"
+          onclick="editBlogHandler"
+          class="btn btn-primary"
+        >Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script src="/js/editBlog.js"></script>

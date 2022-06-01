@@ -22,4 +22,19 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.post("/", withAuth, async (req, res) => {
+  try {
+    const newBlog = await Blog.create({
+      title: req.body.title,
+      content: req.body.content,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newBlog);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(error);
+  }
+});
+
 module.exports = router;

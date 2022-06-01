@@ -1,0 +1,56 @@
+<div class="text-center">
+  <a
+    type="button"
+    class="btn btn-default btn-rounded mb-4"
+    data-bs-toggle="modal"
+    data-bs-target="#newBlogPost"
+  >+ New Blog</a>
+</div>
+
+<form class="modal fade" id="newBlogPost" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New post</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="newBlogTitle" class="col-form-label">
+              Title:
+            </label>
+            <input type="text" class="form-control" id="newBlogTitle" />
+          </div>
+          <div class="mb-3">
+            <label for="newBlogContent" class="col-form-label">Blog Content:</label>
+            <textarea class="form-control" id="newBlogContent"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Close</button>
+        <button
+          type="submit"
+          form="newBlogPost"
+          value="submit"
+          onclick="newBlogHandler"
+          class="btn btn-primary"
+        >Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script src="/js/newBlog.js"></script>

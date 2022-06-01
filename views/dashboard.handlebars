@@ -3,16 +3,27 @@
 </div>
 
 {{#each blogs as |blog|}}
-  <article class="blog blue">
-    <div class="blog_text">
-      <h1 class="blog_title blue">
-        <a href="/blog/{{blog.id}}">{{blog.title}}</a>
-      </h1>
-      <div class="blog_subtitle d-flex flex-row align-items-center">
-        <p>Created on {{format_date blog.date_created}}</p>
-      </div>
+<article class="blog blue d-flex justify-content-between">
+  <div class="blog_text" data-id="{{blog.id}}">
+    <h1 class="blog_title blue">
+      <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+    </h1>
+    <div class="blog_subtitle d-flex flex-row align-items-center">
+      <p>Created on {{format_date blog.date_created}}</p>
     </div>
-  </article>
+  </div>
+
+  <div class="blog_text d-flex flex-row align-items-center">
+    <a href="">
+      <i class="no-button fa fa-edit" style="font-size:24px"></i>
+    </a>
+    <button class="deleteBlog no-button">
+      <i class="avoid-clicks fa fa-trash" style="font-size:24px"></i>
+    </button>
+  </div>
+</article>
 {{/each}}
 
 {{>newBlog}}
+
+<script src="/js/deleteBlog.js"></script>

@@ -20,6 +20,10 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
+.avoid-clicks {
+  pointer-events: none;
+}
+
 body {
   color: #18151f;
   font-size: 16px;

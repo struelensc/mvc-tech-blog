@@ -1,3 +1,4 @@
+// Handler for editing an existing blog post
 const editBlogHandler = async (id) => {
   const title = document.querySelector("#editedBlogTitle").value;
   const content = document.querySelector("#editedBlogContent").value;
@@ -16,6 +17,7 @@ const editBlogHandler = async (id) => {
   }
 };
 
+// Grabs id off of click event to edit
 let ebtn = document.querySelectorAll(".editBlogBtn");
 ebtn.forEach((button) => {
   let id = button.parentElement.previousElementSibling.dataset.id;

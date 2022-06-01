@@ -1,3 +1,4 @@
+// Handler for adding new comments
 const commentFormHandler = async (event) => {
   event.preventDefault();
   const comment = document.querySelector("#newComment").value.trim();

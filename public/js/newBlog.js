@@ -1,3 +1,4 @@
+// Handler for creating a new blog
 const newBlogHandler = async (event) => {
   const title = document.querySelector("#newBlogTitle").value;
   const content = document.querySelector("#newBlogContent").value;

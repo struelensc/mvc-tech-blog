@@ -1,3 +1,4 @@
+// Handler for deleting an existing blog post
 const deleteBlog = async (event) => {
   const id = event.path[2].children[0].dataset.id;
 

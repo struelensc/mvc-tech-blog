@@ -1,19 +1,12 @@
+//require sequelize and dotenv
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
 let sequelize;
 
-if (process.env.DATABASE_URL) {
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: "postgres",
-    protocol: "postgres",
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
-  });
+// when on heroku use the jawsdb otherwise use local host with the .env variables
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -27,4 +20,5 @@ if (process.env.DATABASE_URL) {
   );
 }
 
+//export sequelize
 module.exports = sequelize;
